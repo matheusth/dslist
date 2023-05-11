@@ -2,6 +2,7 @@ package dev.matheus.dslist.entities;
 
 import jakarta.persistence.*;
 
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -11,6 +12,9 @@ public class GameList {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+
+    @OneToMany(mappedBy = "belongingPK.gameList", fetch = FetchType.EAGER)
+    private List<Belonging> belonging;
 
     public GameList(){
 
@@ -26,6 +30,10 @@ public class GameList {
 
     public String getName() {
         return name;
+    }
+
+    public List<Belonging> getBelonging() {
+        return belonging;
     }
 
     @Override

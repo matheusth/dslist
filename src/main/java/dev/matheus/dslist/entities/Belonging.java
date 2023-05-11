@@ -2,9 +2,11 @@ package dev.matheus.dslist.entities;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+
 @Entity
 @Table(name = "tb_belonging")
-public class Belonging {
+public class Belonging implements Serializable {
     @EmbeddedId
     private BelongingPK belongingPK;
     private Integer position;

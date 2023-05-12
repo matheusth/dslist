@@ -10,6 +10,11 @@ sourceCompatibility = '17'
 repositories {
     mavenCentral()
 }
+bootJar {
+    manifest {
+        attributes 'Start-Class': mainClass
+    }
+}
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'

@@ -13,7 +13,7 @@ repositories {
 springBoot {
     jar {
         manifest {
-            attributes 'Start-Class': mainClass
+            attributes 'Main-Class': mainClass
         }
     }
 }

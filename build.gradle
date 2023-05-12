@@ -11,8 +11,10 @@ repositories {
     mavenCentral()
 }
 springBoot {
-    manifest {
-        attributes 'Start-Class': mainClass
+    jar {
+        manifest {
+            attributes 'Start-Class': mainClass
+        }
     }
 }
 
